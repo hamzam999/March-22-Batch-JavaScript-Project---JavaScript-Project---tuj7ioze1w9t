@@ -1,1 +1,53 @@
+<html>
+    <title>Tip calculator </title>
 
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital@1&display=swap');
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="header">
+                TIP CALCULATOR
+            </div>
+            <div>
+                <div>
+                    <p>How much was your bill?</p>
+                    <form id="tip-form" onsubmit="event.preventDefault();    calculateTip()">
+                        ₹ <input type="number" id="billamt" placeholder="Amount to be paid" required>
+                        <p>How was the service?</p>
+                        <div class="serviceQual">
+                            <input id="tip_radio1" type="radio" name="tip_percent" value="0.05" required>
+                            <label for="tip_radio1">5%</label>
+                            <input id="tip_radio2" type="radio" name="tip_percent" value="0.01" required>
+                            <label for="tip_radio2">10%</label>
+                            <input id="tip_radio3" type="radio" name="tip_percent" value="0.15" required>
+                            <label for="tip_radio3">15%</label>
+                            <input id="tip_radio4" type="radio" name="tip_percent" value="0.25" required>
+                            <label for="tip_radio4">25%</label>
+                            <input id="tip_radio5" type="radio" name="tip_percent" value="0.5" required>
+                            <label for="tip_radio5">50%</label>
+                            <input id="tip_radio" type="radio" name="tip_percent" value="custom" onchange="custom_input()"
+                                required>
+                            <input type="number" id="custom_percent" placeholder="custom %">
+                        </div>
+                        <p>Total number of persons</p>
+                        <input type="number" id="peopleamt" placeholder="Number of people" required><br>
+                        <button id="calculate" type="submit">Calculate Tip </button>
+                    </form>
+                </div>
+                <div class="tip">
+                    <p>Tip Amount</p>
+                    ₹ <span id="total"></span>
+                    <span id="each" style="display: none;">each</span>
+                </div>
+            </div>
+        </div>
+        <script src="App.js"></script>
+    </body>
+    
+    </html>

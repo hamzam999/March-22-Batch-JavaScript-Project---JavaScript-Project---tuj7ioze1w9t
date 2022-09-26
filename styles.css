@@ -1,1 +1,73 @@
+body {
+    background-color: grey;
+    text-align: center;
+         font-family: 'Poppins', sans-serif;;
+}
 
+
+
+.container {
+
+    width: 600px;
+    height: 515px;
+    border-radius: 25px;
+    background-color: honeydew;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.header
+{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    height: 50px; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 15px;
+}
+
+#billamt{
+    width: 50%;
+}
+
+button {
+margin: 20px auto;
+width: 150px;
+height: 50px;
+background-color: black;
+color: rgb(247, 247, 247);
+font-size: 20px;
+border: none;
+border-radius: 5px;
+}
+button:hover{
+   color: rgb(232, 195, 30);
+}
+input {
+width: 55%;
+border: none;
+border-bottom: 1px solid green;
+padding: 10px;
+border-radius: 8px;
+}
+
+.serviceQual{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 20px;
+}
+
+.serviceQual input  {
+    list-style-type: none ;
+    width: 20px;
+}
+
+#custom_percent{
+    width: 100px;
+}
