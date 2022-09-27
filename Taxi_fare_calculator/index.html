@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculate fare</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key= AIzaSyD51OcSUK4f64fv3yoiVhaMECtf1L6gItU"
+            type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="fare-box">
+            <h1>Taxi fare Calculator</h1>
+            <div>
+                <form id="form_fare" class="taxi-fare-calc">
+                
+                    <label> Enter Origin </label>
+                    <div>
+                        <input class="input-box" id="from_places" required placeholder="Enter origin" />
+                        <input id="origin" name="origin" required type="hidden" />
+                    </div>
+                    <label> Enter Destination </label>
+                
+                    <div>
+                        <input class="input-box" id="to_places" required placeholder="Enter destination" />
+                        <input id="destination" name="destination" required type="hidden" />
+                    </div>
+                    <br>
+                    <button type="submit">Calculate Distance</button>
+
+                <h2>Total Distance is <span id="dist">0</span>km</h2>
+                <button type="submit" onclick=taxifare()>Calculate Fare</button>
+                <h2>Total fare is INR <span id="total_fare">0</span>/-</h2>
+                <input class="reset-btn" type="reset" onclick=resetfare()>
+                </form>
+
+            </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
